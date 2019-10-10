@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./Header";
+import Generos from "./Generos";
 import { 
   BrowserRouter as Router, 
   Route
@@ -8,9 +9,6 @@ import {
 
 const Home = () => {
   return <h1>Home</h1>;
-};
-const Generos = () => {
-  return <h1>Generos</h1>;
 };
 
 function App() {
