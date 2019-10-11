@@ -17,12 +17,15 @@ const Generos = () => {
     });
   };
 
-  const renderizaLinha = record => {
+  const renderizaLinha = (record) => {
     return (
       <tr key={record.id}>
         <th scope="row">{record.id}</th>
         <td>{record.name}</td>
-        <td><button onClick={() => deleteGenero(record.id)}>-</button></td>
+        <td>
+          <Link className="btn btn-info" to={"/generos/" + record.id}>Editar</Link>
+          <button className="btn btn-danger" onClick={() => deleteGenero(record.id)}>Remover</button>
+        </td>
       </tr>
     );
   }
