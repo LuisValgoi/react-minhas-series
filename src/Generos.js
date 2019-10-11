@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 import axios from "axios";
 
 const Generos = () => {
@@ -34,6 +35,9 @@ const Generos = () => {
     <div className="container">
       <h1>Generos</h1>
 
+      <div>
+        <Link to="/generos/novo">Novo Genêro</Link>
+      </div>
       <table className="table table-dark">
         <thead>
           <tr>
