@@ -3,15 +3,12 @@ import Header from "./Header";
 import Generos from "./Generos";
 import NovoGenero from "./NovoGenero";
 import EditarGenero from "./EditarGenero";
+import Home from "./Home";
 import { 
   BrowserRouter as Router, 
   Route,
   Switch
 } from "react-router-dom";
-
-const Home = () => {
-  return <h1>Home</h1>;
-};
 
 function App() {
   return (
