@@ -10,7 +10,7 @@ const Generos = () => {
     });
   }, []);
   
-  const deleteGenero = (id) => {
+  const deleteRecord = (id) => {
     axios.delete("/api/genres/" + id).then((res) => {
       const filtrado = data.filter(res => res.id !== id);
       setData(filtrado)
@@ -24,7 +24,7 @@ const Generos = () => {
         <td>{record.name}</td>
         <td>
           <Link className="btn btn-info" to={"/generos/" + record.id}>Editar</Link>
-          <button className="btn btn-danger" onClick={() => deleteGenero(record.id)}>Remover</button>
+          <button className="btn btn-danger" onClick={() => deleteRecord(record.id)}>Remover</button>
         </td>
       </tr>
     );
@@ -34,6 +34,9 @@ const Generos = () => {
     return (
       <div className="container">
         <h1>Genêros</h1>
+        <div>
+          <Link to="/generos/novo" className="btn btn-primary">Novo Genêro</Link>
+        </div>
         <div className="alert alert-warning" role="alert">
           Você não possui generos criados.
         </div>
