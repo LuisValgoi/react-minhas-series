@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import Header from "./Header";
 import Generos from "./Generos";
 import NovoGenero from "./NovoGenero";
@@ -15,13 +14,6 @@ const Home = () => {
 };
 
 function App() {
-  const [data, setData] = useState({});
-  useEffect(() => {
-    axios.get("/api").then(res => {
-      setData(res.data)
-    });
-  }, []);
-
   return (
     <div>
       <Router>
@@ -33,7 +25,6 @@ function App() {
             <Route path="/generos/novo" exact component={NovoGenero} />
             <Route path="/generos/:id" exact component={EditarGenero} />
           </Switch>
-          <pre>{JSON.stringify(data)}</pre>
         </div>
       </Router>
     </div>
