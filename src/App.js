@@ -12,6 +12,7 @@ import {
   Route,
   Switch
 } from "react-router-dom";
+import InfoSerie from "./InfoSerie";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/generos/:id" exact component={EditarGenero} />
             <Route path="/series" exact component={Series} />
             <Route path="/series/novo" exact component={NovaSerie} />
+            <Route path="/series/:id" exact component={InfoSerie} />
           </Switch>
         </div>
       </Router>
